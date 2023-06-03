@@ -5,12 +5,19 @@ TikTok Video Downloader is a terminal-based application that allows you to downl
 ## Installation
 
 1. Clone the repository or download the source code.
+```
+git clone https://github.com/sudipnext/Tiktok-Video-downloader.git
+```
 2. Open a terminal and navigate to the project directory.
 3. Run the following command to install the dependencies:
-``` npm i
-```
+``` 
+npm i
+ ```
 4. There are two files one for scraping and generating the user id and another one for downloading you can run them one by one by 
-``` node file_name ```
+``` 
+node file_name 
+```
+
 
 
 ## Usage
