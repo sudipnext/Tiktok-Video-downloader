@@ -1,10 +1,12 @@
 // Import required modules
-const fetch = require("node-fetch");
-const chalk = require("chalk");
-const fs = require("fs");
-const { resolve } = require("path");
-const { reject } = require("lodash");
-const { Headers } = require("node-fetch");
+import fetch from "node-fetch";
+import chalk from "chalk";
+import fs from "fs";
+import path, { resolve } from "path";
+import pkg from 'lodash';
+const { reject } = pkg;
+import { Headers } from "node-fetch";
+
 
 // Set user-agent headers to avoid IP bans
 const tiktokUserAgent = new Headers();
@@ -71,12 +73,29 @@ const extractVideoId = (url) => {
 
 // Main function (entry point)
 (async () => {
-  var videoUrls = []; // List of video URLs to download
+  var videoUrls = [
+    'https://www.tiktok.com/@khaby.lame/video/7239913302556560667',
+    'https://www.tiktok.com/@khaby.lame/video/7239007603148344603',
+    'https://www.tiktok.com/@khaby.lame/video/7237507826342563098',
+    'https://www.tiktok.com/@khaby.lame/video/7237136777348238618',
+    'https://www.tiktok.com/@khaby.lame/video/7236412257670925594',
+    'https://www.tiktok.com/@khaby.lame/video/7234938483079531802',
+    'https://www.tiktok.com/@khaby.lame/video/7234540189316697371',
+    'https://www.tiktok.com/@khaby.lame/video/7234174319138491674',
+    'https://www.tiktok.com/@khaby.lame/video/7233797305286036762',
+    'https://www.tiktok.com/@khaby.lame/video/7233423347177032987',
+    'https://www.tiktok.com/@khaby.lame/video/7232610702618414362',
+    'https://www.tiktok.com/@khaby.lame/video/7231974500999400731',
+    'https://www.tiktok.com/@khaby.lame/video/7231186203003948314',
+    'https://www.tiktok.com/@khaby.lame/video/7230088385799408923',
+    'https://www.tiktok.com/@khaby.lame/video/7229785946785402139',
+    'https://www.tiktok.com/@khaby.lame/video/7229396632150822170'
+  ] // List of video URLs to download
   var videoDataList = []; // List to store video data
 
   // Example URL to download a TikTok video
-  const tiktokUrl = "https://www.tiktok.com/@khaby.lame/video/7239913302556560667";
-  videoUrls.push(tiktokUrl);
+  // const tiktokUrl = "https://www.tiktok.com/@khaby.lame/video/7239913302556560667";
+  // videoUrls.push(tiktokUrl);
 
   console.log(chalk.green(`[!] Found ${videoUrls.length} video`));
 

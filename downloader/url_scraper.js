@@ -1,10 +1,10 @@
-const { JSDOM } = require("jsdom");
-const { window } = new JSDOM();
+// const { JSDOM } = require("jsdom");
+// const { window } = new JSDOM();
 const cheerio = require("cheerio");
 const axios = require("axios"); // For making HTTP requests
 
-global.window = window;
-global.document = window.document;
+// global.window = window;
+// global.document = window.document;
 
 // Fetch the HTML content from the URL
 axios
@@ -13,19 +13,18 @@ axios
     // Load the HTML document into Cheerio
     const $ = cheerio.load(response.data);
 
-    // Scroll the page (if needed)
-    // Scroll the page until the scroll position reaches the end
-    function scrollPageToBottom() {
-      if (
-        window.scrollY + window.innerHeight <
-        document.documentElement.scrollHeight
-      ) {
-        window.scrollTo(0, document.documentElement.scrollHeight);
-        setTimeout(scrollPageToBottom, 1000); // Wait for a second and scroll again
-      }
-    }
 
-    scrollPageToBottom();
+    // function scrollPageToBottom() {
+    //   if (
+    //     window.scrollY + window.innerHeight <
+    //     document.documentElement.scrollHeight
+    //   ) {
+    //     window.scrollTo(0, document.documentElement.scrollHeight);
+    //     setTimeout(scrollPageToBottom, 1000); // Wait for a second and scroll again
+    //   }
+    // }
+
+    // scrollPageToBottom();
 
     // Find all anchor tags within the specified class and extract the href values
     const hrefs = [];
