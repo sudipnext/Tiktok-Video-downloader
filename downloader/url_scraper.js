@@ -13,19 +13,6 @@ axios
     // Load the HTML document into Cheerio
     const $ = cheerio.load(response.data);
 
-
-    // function scrollPageToBottom() {
-    //   if (
-    //     window.scrollY + window.innerHeight <
-    //     document.documentElement.scrollHeight
-    //   ) {
-    //     window.scrollTo(0, document.documentElement.scrollHeight);
-    //     setTimeout(scrollPageToBottom, 1000); // Wait for a second and scroll again
-    //   }
-    // }
-
-    // scrollPageToBottom();
-
     // Find all anchor tags within the specified class and extract the href values
     const hrefs = [];
     $(".tiktok-1s72ajp-DivWrapper a").each((index, element) => {

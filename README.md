@@ -15,7 +15,7 @@ npm i
  ```
 4. There are two files one for scraping and generating the user id and another one for downloading you can run them one by one by 
 ``` 
-node file_name 
+node final.mjs
 ```
 
 
@@ -24,8 +24,6 @@ node file_name
 
 1. Open a terminal and navigate to the project directory.
 2. Run the following command to start the application:
-
-
 3. Follow the prompts to input the TikTok video URLs you want to download.
 4. The application will retrieve the videos without the watermark and save them to a "downloads" folder within the project directory.
 
@@ -51,7 +49,7 @@ This application is provided for educational and personal use only. The download
 
 This application is built using the following libraries and modules:
 
+- [tiktok-signature](https://github.com/carcabot/tiktok-signature.git)
 - [node-fetch](https://www.npmjs.com/package/node-fetch)
 - [chalk](https://www.npmjs.com/package/chalk)
 - [fs](https://nodejs.org/api/fs.html)
-
